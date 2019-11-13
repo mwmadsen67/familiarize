@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => res.send("Who's Got Next?"));
+app.get('/', (req, res) => res.send("Familiarize"));
 
 const port = process.env.PORT || 5000;
 
