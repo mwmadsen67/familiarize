@@ -9,12 +9,9 @@ const validateRegisterInput = require("../../validation/register")
 const validateLoginInput = require("../../validation/login")
 
 
-// const test = router.get(("/test"), (req,res) => {
-//     res.json({msg:"this is users route"})
+// router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
+//     res.json({ msg: 'Success' });
 // })
-router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
-    res.json({ msg: 'Success' });
-})
 
 router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
     res.json({
@@ -25,19 +22,20 @@ router.get('/current', passport.authenticate('jwt', { session: false }), (req, r
 })
 
 router.post("/register", (req, res) => {
+
     const { errors, isValid } = validateRegisterInput(req.body);
 
     if (!isValid) {
         return res.status(400).json(errors);
     }
 
-    User.findOne({ name: req.body.name }).then(user => {
+    User.findOne({ username: req.body.username }).then(user => {
         if (user) {
-            errors.name = "User already exists";
+            errors.username = "User already exists";
             return res.status(400).json(errors);
         } else {
             const newUser = new User({
-                name: req.body.name,
+                username: req.body.username,
                 email: req.body.email,
                 password: req.body.password
             });
@@ -68,7 +66,7 @@ router.post("/register", (req, res) => {
 router.post('/login', (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
-    const { errors, isValid } = validateRegisterInput(req.body);
+    const { errors, isValid } = validateLoginInput(req.body);
 
     if(!isValid){
         res.status(400).json(errors)
