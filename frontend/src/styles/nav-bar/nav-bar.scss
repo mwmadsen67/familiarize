@@ -21,6 +21,11 @@
                 border-radius: 5%;
                 cursor: pointer;
             }
+
+            .link-buttons:hover{
+                background: rgb(219, 255, 37);  
+                transition: 1s;
+            }
         }
     }
 }
@@ -47,5 +52,10 @@
             border-radius: 5%;
             cursor: pointer;
         }
+
+        .link-buttons:hover{
+                background: rgb(219, 255, 37);  
+                transition: 1s;
+            }
     }
 }
