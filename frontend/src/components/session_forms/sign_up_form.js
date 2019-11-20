@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter,Link } from 'react-router-dom';
 import login from "../../styles/session-signup/login.scss"
 class SignupForm extends React.Component {
     constructor(props) {
@@ -44,13 +44,13 @@ class SignupForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <div className="errors-container">
                 {Object.keys(this.state.errors).map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <div key={`error-${i}`}>
                         {this.state.errors[error]}
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
         );
     }
 
@@ -88,6 +88,10 @@ class SignupForm extends React.Component {
                         />
                         <br />
                         <input className="submit-button" type="submit" value="Submit" />
+                        <br/>
+                        <div>Already have an account?</div>
+                        <Link to="/login" >Login</Link>
+                        <br/>
                         {this.renderErrors()}
                 </form>
             </div>
