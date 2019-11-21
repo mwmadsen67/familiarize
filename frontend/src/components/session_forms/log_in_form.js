@@ -61,6 +61,7 @@ class LoginForm extends React.Component {
         return (
             <div className="session-signup-form">
                 <form onSubmit={this.handleSubmit} className="login-form">
+                        <br/>
                         <input type="text"
                             value={this.state.email}
                             onChange={this.update('email')}
