@@ -10,6 +10,10 @@ const TreeSchema = new Schema({
     type: Schema.types.ObjectID,
     ref: "users"
   },
+  collaborators: [{
+    type: Schema.Types.ObjectID,
+    ref: "users"
+  }],
   date: {
     type: Date,
     default: Date.now
