@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 const db = require('./config/keys').mongoURI;
 const users = require('./routes/api/users')
 const tweets = require('./routes/api/tweets.js')
+const trees = require('./routes/api/trees')
 const passport = require("passport")
 
 mongoose
@@ -25,6 +26,7 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 app.use("/api/users",users)
 app.use("/api/tweets",tweets)
+app.use("/api/trees", trees)
 
 const port = process.env.PORT || 5000;
 
