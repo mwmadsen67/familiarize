@@ -12,14 +12,14 @@ mongoose
     .then(() => console.log("Connected to MongoDB successfully"))
     .catch(err => console.log(err));
 
+app.get('/', (req, res) => {
+    console.log(res);
+    res.send("Familiarize");
+});
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
-
-app.get('/', (req, res) => {
-    
-});
 
 app.use(passport.initialize());
 require('./config/passport')(passport);
