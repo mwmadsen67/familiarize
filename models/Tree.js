@@ -4,7 +4,15 @@ const Schema = mongoose.Schema;
 const TreeSchema = new Schema({
   name: {
     type: String,
-    requre: true
+    require: true
+  },
+  creator: {
+    type: Schema.types.ObjectID,
+    ref: "users"
+  },
+  date: {
+    type: Date,
+    default: Date.now
   }
 });
 
