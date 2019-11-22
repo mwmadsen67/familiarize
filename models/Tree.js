@@ -7,8 +7,9 @@ const TreeSchema = new Schema({
     require: true
   },
   creator: {
-    type: Schema.types.ObjectID,
-    ref: "users"
+    type: Schema.Types.ObjectID,
+    ref: "users",
+    require: true
   },
   collaborators: [{
     type: Schema.Types.ObjectID,
