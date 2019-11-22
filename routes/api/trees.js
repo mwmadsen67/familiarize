@@ -32,6 +32,33 @@ router.get('/', (req, res) => {
 });
 
 // Get Specific Tree
-router.get('/:id')
+router.get('/:id', (req, res) => {
+  Tree.find({ _id: req.params.id })
+    .then((tree) => res.json(tree))
+    .catch(err => res.status(404).json({ noTreeFound: 'No tree found' }))
+});
+
+// Update Specific Tree
+router.patch('/:id', (req, res) => {
+  debugger;
+  Tree.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    .then(tree => res.json(tree))
+    .catch(err => res.status(404).json(err))
+});
+
+// Delete Specific Tree
+router.delete('/:id', (req, res) => {
+  Tree.findByIdAndDelete(req.params.id)
+    .then(tree => res.json(tree))
+    .catch(err => res.status(404).json(err))
+});
+
+// Get Specific User's Trees
+router.get('/user/:user_id', (req, res) => {
+  Tree.find({ creator: req.params.user_id })
+    .then(trees => res.json(trees))
+    .catch(err => res.status(404).json({ noTreesFound: "No trees found by that user" }))
+});
+
 
 module.exports = router;
