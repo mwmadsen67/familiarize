@@ -22,14 +22,27 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
   });
 
   newNode.save().then(node => res.json(node));
-  }
-);
+  });
 
 // Get All Nodes for Specific Tree
 router.get('/tree/:tree_id', (req, res) => {
   Node.find({ tree_id: req.params.tree_id })
     .then(nodes => res.json(nodes))
     .catch(err => res.status(404).json({ noNodesFound: "No Nodes found on that tree" }))
+});
+
+// Delete a Node
+router.delete('/:id', (req, res) => {
+  Node.findByIdAndDelete(req.params.id)
+    .then(node => res.json(node))
+    .catch(err => res.status(404).json(err))
+});
+
+// Update a Node
+router.patch('/:id', (req, res) => {
+ Node.findByIdAndUpdate(req.params.id, req.body, { new:true })
+    .then(node => res.json(node))
+    .catch(err => res.status(404).json(err))
 });
 
 module.exports = router;

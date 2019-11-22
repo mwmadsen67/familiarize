@@ -21,8 +21,7 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
     });
 
     newTree.save().then(tree => res.json(tree));
-  }
-);
+  });
 
 // Get All Trees
 router.get('/', (req, res) => { 
@@ -40,7 +39,6 @@ router.get('/:id', (req, res) => {
 
 // Update Specific Tree
 router.patch('/:id', (req, res) => {
-  debugger;
   Tree.findByIdAndUpdate(req.params.id, req.body, {new: true})
     .then(tree => res.json(tree))
     .catch(err => res.status(404).json(err))
