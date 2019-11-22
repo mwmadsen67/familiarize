@@ -35,7 +35,7 @@ router.post("/", passport.authenticate('jwt',{session:false}),(req,res)=>{
         return res.status(400).json(errors)
     }
     const newTweet = new Tweet({
-        user:req.user.id,
+        user: req.user.id,
         text: req.body.text
     })
     newTweet.save().then((tweet) => res.json(tweet))
