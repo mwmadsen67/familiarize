@@ -1,5 +1,4 @@
 import * as APIUtil from '../util/tree_api_util';
-import { receiveErrors } from './session_actions';
 
 export const RECEIVE_TREE = "RECEIVE_TREE";
 export const RECEIVE_TREES = "RECEIVE_TREES";
@@ -44,7 +43,7 @@ export const getTree = id => dispatch => (
 export const updateTree = id => dispatch => (
   APIUtil.updateTree(id)
     .then((tree) => (dispatch(receiveTree(tree))),
-    (err) => (dispatch(receiveTreeErrors(erre.response.data)))
+    (err) => (dispatch(receiveTreeErrors(err.response.data)))
     )
 );
 
@@ -55,8 +54,8 @@ export const deleteTree = id => dispatch => (
     )
 );
 
-export const getUserTrees = userId => dispatch => (
-  APIUtil.getUserTrees(userId)
+export const getUsersTrees = userId => dispatch => (
+  APIUtil.getUsersTrees(userId)
     .then((trees) => (dispatch(receiveTrees(trees))), 
     (err) => (dispatch(receiveTreeErrors(err.response.data)))
     )
