@@ -1,6 +1,6 @@
 import { RECEIVE_TREE, RECEIVE_TREES } from '../actions/tree_actions';
 
-const treesReducer = (state = {}, action) => {
+const treesReducer = (state = null, action) => {
   Object.freeze(state);
 
   switch(action.type) {
