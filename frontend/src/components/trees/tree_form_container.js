@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import TreeForm from './tree_from';
-import { createTree } from '../../actions/tree_actions';
+import { createTree,  getTrees} from '../../actions/tree_actions';
 
 const MSP = (state) => {
   return ({
@@ -10,7 +10,8 @@ const MSP = (state) => {
 
 const MDP = (dispatch) => {
   return ({
-    createTree: (tree) => dispatch(createTree(tree))
+    createTree: (tree) => dispatch(createTree(tree)),
+    getTrees: () => dispatch(getTrees())
   });
 };
 
