@@ -3,6 +3,7 @@ import * as APIUtil from '../util/tree_api_util';
 export const RECEIVE_TREE = "RECEIVE_TREE";
 export const RECEIVE_TREES = "RECEIVE_TREES";
 export const RECEIVE_TREE_ERRORS = 'RECEIVE_TREE_ERRORS';
+export const DELETE_TREE = 'DELETE_TREE';
 
 export const receiveTree = tree => ({
   type: RECEIVE_TREE,
@@ -17,6 +18,11 @@ export const receiveTrees = trees => ({
 export const receiveTreeErrors = errors => ({
   type: RECEIVE_TREE_ERRORS,
   errors
+});
+
+export const removeTree = tree => ({
+  type: DELETE_TREE,
+  tree
 });
 
 export const createTree = tree => dispatch => (
@@ -49,7 +55,7 @@ export const updateTree = id => dispatch => (
 
 export const deleteTree = id => dispatch => (
   APIUtil.deleteTree(id)
-    .then((tree) => (dispatch(receiveTree(tree))), 
+    .then((tree) => (dispatch(removeTree(tree))), 
     (err) => (dispatch(receiveTreeErrors(err.response.data)))
     )
 );
