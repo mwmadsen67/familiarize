@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
 
 // Get Specific Tree
 router.get('/:id', (req, res) => {
-  Tree.find({ _id: req.params.id })
+  Tree.findOne({ _id: req.params.id })
     .then((tree) => res.json(tree))
     .catch(err => res.status(404).json({ noTreeFound: 'No tree found' }))
 });

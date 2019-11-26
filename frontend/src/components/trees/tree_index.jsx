@@ -6,11 +6,10 @@ import { Link } from 'react-router-dom';
 class TreeIndex extends React.Component{
   constructor(props) {
     super(props)
-    this.state = {};
   }
 
   componentDidMount() {
-    this.props.getTrees();
+    Promise.all([this.props.getTrees(), this.props.clearNodes()]);
   }
   
   render() {
