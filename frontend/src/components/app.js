@@ -8,7 +8,6 @@ import LoginFormContainer from "./session_forms/log_in_form_container"
 import SignUpFormContainer from "./session_forms/sign_up_form_container"
 import application from "../styles/application/application.scss"
 import TreeIndexContainer from "./trees/tree_index_container";
-import TreeFormContainer from '../components/trees/tree_form_container';
 import TreeShowContainer from '../components/trees/tree_show_container';
 
 const App = () => {
@@ -20,11 +19,10 @@ const App = () => {
                 <AuthRoute path={"/login"} component={LoginFormContainer}/>
                 <AuthRoute path={"/signup"} component={SignUpFormContainer}/>
                 <ProtectedRoute exact path={'/main'} component={TreeIndexContainer} />
-                <ProtectedRoute exact path={'/maketrees'} component={TreeFormContainer} />
-                <ProtectedRoute exact path={'/showtree'} component={TreeShowContainer} />
+                <ProtectedRoute exact path={'/tree/:treeId'} component={TreeShowContainer} />
             </Switch>
         </div>
     )
 }
 
-export default App
+export default App;

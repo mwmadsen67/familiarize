@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import TreeShow from './tree_show';
 
-const MSP = (state) => {
+const MSP = (state, ownProps) => {
   return ({
-
+    tree: state.entities.trees[ownProps.match.params.treeId]
   });
 };
 

@@ -1,4 +1,4 @@
-import { RECEIVE_TREE, RECEIVE_TREES } from '../actions/tree_actions';
+import { RECEIVE_TREE, RECEIVE_TREES, DELETE_TREE} from '../actions/tree_actions';
 
 const treesReducer = (state = null, action) => {
   Object.freeze(state);
@@ -11,6 +11,9 @@ const treesReducer = (state = null, action) => {
       action.trees.data.map(tree => {
         newState[tree._id] = tree;
       })
+      return newState;
+    case DELETE_TREE:
+      delete newState[action.tree.data._id]
       return newState;
     default:
       return state;

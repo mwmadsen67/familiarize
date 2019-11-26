@@ -18,21 +18,20 @@ class TreeIndex extends React.Component{
     const trees = Object.keys(this.props.trees).map(
       (id) => {
       return (
-        <div>
+        <div key={id}>
           <TreeIndexItem
-          key={id}
-          tree={this.props.trees[id]}/>
+          tree={this.props.trees[id]}
+          user={this.props.user}
+          delete={this.props.deleteTree}
+          update={this.props.updateTree}/>
         </div>
       )
     })
     return (
       <div>
-        <h1>Your Trees</h1>
+        <h1>All The Trees</h1>
         {trees}
         <TreeFormContainer />
-        {/* <span>
-          <Link to='/maketrees'>Create a Tree</Link> */}
-        {/* </span> */}
       </div>
     );
   }

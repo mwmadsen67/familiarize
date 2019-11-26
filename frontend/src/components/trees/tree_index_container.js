@@ -1,17 +1,20 @@
 import { connect } from 'react-redux';
 import TreeIndex from './tree_index';
-import { getTrees, getTree } from '../../actions/tree_actions';
+import { getTrees, getTree, updateTree, deleteTree } from '../../actions/tree_actions';
 
 const MSP = (state) => {
   return ({
-    trees: state.entities.trees
+    trees: state.entities.trees,
+    user: state.session.user.id
   })
 };
 
 const MDP = (dispatch) => {
   return ({
     getTrees: () => dispatch(getTrees()),
-    getTree: (id) => dispatch(getTree(id))
+    getTree: (id) => dispatch(getTree(id)),
+    updateTree: (id) => dispatch(updateTree(id)),
+    deleteTree: (id) => dispatch(deleteTree(id))
   })
 };
 
