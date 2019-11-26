@@ -6,8 +6,8 @@ class TreeShow extends React.Component {
   constructor(props) {
     super(props)
   }
-
-  componentDidMount() {
+  
+    componentDidMount() {
     Promise.all([
       this.props.getTree(this.props.match.params.treeId),
       this.props.getTreeNodes(this.props.match.params.treeId)
@@ -17,16 +17,6 @@ class TreeShow extends React.Component {
         tree: this.props.tree
       })
     );
-    // this.props.getTree(this.props.match.params.treeId)
-    //   .then(() => 
-    //   this.setState({
-    //     tree: this.props.tree
-    //   })
-    // );
-    // this.props.getTreeNodes(this.props.match.params.treeId)
-    //   .then(() => this.setState({
-    //     tree: this.props.tree
-    //   }));
   };
 
   render() {
