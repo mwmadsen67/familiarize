@@ -10,7 +10,7 @@ class TreeIndex extends React.Component{
   }
 
   componentDidMount() {
-    this.props.getTrees();
+    Promise.all([this.props.getTrees(), this.props.clearNodes()]);
   }
   
   render() {

@@ -4,6 +4,7 @@ export const RECEIVE_NODE = 'RECEIVE_NODE';
 export const RECEIVE_NODES = 'RECEIVE_NODES';
 export const REMOVE_NODE = 'REMOVE_NODE';
 export const RECEIVE_NODE_ERRORS = 'RECEIVE_NODE_ERRORS';
+export const CLEAR_NODES = 'CLEAR_NODES';
 
 export const receiveNode = node => ({
   type: RECEIVE_NODE,
@@ -23,6 +24,10 @@ export const receiveNodeErrors = errors => ({
 export const removeNode = node => ({
   type: REMOVE_NODE,
   node
+});
+
+export const clearNodes = () => ({
+  type: CLEAR_NODES
 });
 
 export const createNode = node => dispatch => (

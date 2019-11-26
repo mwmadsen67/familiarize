@@ -1,4 +1,4 @@
-import { RECEIVE_NODES, RECEIVE_NODE, REMOVE_NODE } from '../actions/node_actions';
+import { RECEIVE_NODES, RECEIVE_NODE, REMOVE_NODE, CLEAR_NODES } from '../actions/node_actions';
 
 const nodeReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -15,6 +15,8 @@ const nodeReducer = (state = {}, action) => {
     case REMOVE_NODE:
       delete newState[action.node.data._id]
       return newState;
+    case CLEAR_NODES:
+      return {};
     default:
       return state;
   };
