@@ -9,7 +9,7 @@ const treesReducer = (state = {}, action) => {
       return newState;
     case RECEIVE_TREES:
       action.trees.data.map(tree => {
-        newState[tree._id] = tree;
+        return newState[tree._id] = tree;
       })
       return newState;
     case DELETE_TREE:

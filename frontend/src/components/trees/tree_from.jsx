@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles/reset.scss';
 
 class TreeForm extends React.Component {
   constructor(props) {
@@ -41,10 +42,12 @@ class TreeForm extends React.Component {
             placeholder='Tree Name'
             className='tree-form-input'
           />
+          <div>
           <input 
           className='tree-form-submit'
           type='submit'
           value='Create Tree'/>
+          </div>
         </form>
       </div>
     );

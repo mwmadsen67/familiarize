@@ -1,6 +1,9 @@
 import React from 'react';
 import NodeFormContainer from '../nodes/node_form_container';
 import NodeItem from '../nodes/node_item';
+import '../../styles/reset.scss';
+import '../../styles/trees/tree_show.scss';
+
 
 class TreeShow extends React.Component {
   constructor(props) {
@@ -14,7 +17,7 @@ class TreeShow extends React.Component {
     ]).then(() =>
       this.setState({
         tree: this.props.tree,
-        tree: this.props.tree
+        nodes: this.props.nodes
       })
     );
   };
@@ -31,14 +34,17 @@ class TreeShow extends React.Component {
       )
     })
     return (
-      <div>
-        <h1>{this.state.tree.name} Tree</h1>
-        <NodeFormContainer tree={this.state.tree}/>
-        <div>
-        <h2>Nodes</h2>
+    <div className='show-main'>
+        <h1 className='show-title'>{this.state.tree.name} Tree</h1>
+      <div className='show-body'>
+        <div className='tree'>
         {nodes}
         </div>
-      </div>
+        <div className='node-form'>
+        <NodeFormContainer tree={this.state.tree}/>
+        </div>
+        </div>
+    </div>
     )
   };
 };
