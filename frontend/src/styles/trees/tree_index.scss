@@ -1,5 +1,7 @@
 .tree-index-header {
   text-align: center;
+  font-size: 45px;
+  font-weight: bold;
 }
 
 .tree-index-main {
@@ -45,7 +47,7 @@
   box-shadow: 5px 5px 5px green;
   text-align: center;
   padding: 10px;
-  height: 20%;
+  height: 30%;
   font-size: 30px;
   font-weight: bold;
   display: flex;
@@ -66,12 +68,21 @@
   font-size: 15px;
   border: 1px solid darkgreen;
   cursor: pointer;
+    &:hover {
+      filter: brightness(85%);
+    }
 }
 
 .tree-delete {
   background: rgb(213, 252, 154);
   border-radius: 4px;
   border: 1px solid darkgreen;
-  font-size: 15px;
+  font-size: 18px;
+  padding: 3px;
   cursor: pointer;
+  &:hover{
+      filter: brightness(85%);
+    }
 }
+
+

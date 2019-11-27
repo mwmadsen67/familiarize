@@ -2,11 +2,19 @@
     .application-container{
         width:100vw;
         height:100vh;
+        background: rgb(213, 252, 154);
+        background-image: url('../../assets/images/tree.png');
+        background-repeat: no-repeat;
+        background-size: auto;
     }
 }
 @media screen and (min-width:401px){
     .application-container{
-            width:100vw;
-            height:100vh;
+        width:100vw;
+        height:100vh;
+        background: rgb(213, 252, 154);
+        background-image: url('../../assets/images/tree.png');
+        background-repeat: no-repeat;
+        background-size: auto;
     }
 }

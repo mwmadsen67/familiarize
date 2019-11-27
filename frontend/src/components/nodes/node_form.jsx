@@ -41,11 +41,13 @@ class NodeForm extends React.Component {
             placeholder='Node Name'
             className='node-form-input'
           />
+          <div>
           <input
             className='node-form-submit'
             type='submit'
             value='Create Node'
           />
+          </div>
         </form>
       </div>
     );

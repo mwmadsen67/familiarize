@@ -8,6 +8,8 @@
 
 .show-title {
   text-align: center;
+  font-size: 45px;
+  font-weight: bold;
 }
 
 .show-body {
@@ -29,6 +31,23 @@
   flex-direction: column;
   justify-content: space-between;
   width: 20%;
+}
+
+.node-form-input {
+  background: rgb(213, 252, 154);
+  font-size: 18px;
+}
+
+.node-form-submit {
+  background: rgb(213, 252, 154);
+  border-radius: 4px;
+  width: 30%;
+  font-size: 15px;
+  border: 1px solid darkgreen;
+  cursor: pointer;
+    &:hover {
+      filter: brightness(85%);
+    }
 }
 
 .tree {

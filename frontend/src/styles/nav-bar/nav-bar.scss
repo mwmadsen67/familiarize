@@ -19,12 +19,13 @@
                 background: #fff;
                 text-align: center;
                 border-radius: 5%;
+                padding: 2px;
+                background: rgb(219, 255, 37);
                 cursor: pointer;
             }
 
-            .link-buttons:hover{
-                background: rgb(219, 255, 37);  
-                transition: 1s;
+            .link-buttons:hover{  
+                filter: brightness(85%);
             }
         }
     }
@@ -32,6 +33,9 @@
     .logo{
         text-decoration: none;
         color: black;
+        font-size: 25px;
+        font-weight: bold;
+
     }
 }
 
@@ -55,17 +59,21 @@
             background: #fff;
             text-align: center;
             border-radius: 5%;
+            padding: 2px;
+            background: rgb(213, 252, 154);
             cursor: pointer;
         }
         
-        .link-buttons:hover{
-            background: rgb(219, 255, 37);  
-            transition: 1s;
+        .link-buttons:hover{  
+            filter: brightness(85%);
         }
     }
 
     .logo{
         text-decoration: none;
         color: black;
+        font-size: 25px;
+        font-weight: bold;
+
     }
 }
