@@ -1,5 +1,5 @@
 import React from "react"
-import {withRouter} from "react-router-dom"
+import {withRouter,Link} from "react-router-dom"
 import navbar from "../../styles/nav-bar/nav-bar.scss"
 class NavBar extends React.Component{
 
@@ -45,7 +45,7 @@ class NavBar extends React.Component{
 
         return(
             <div className="navbar-container">
-                <div>Familiarize</div>
+                <Link to="/main">Familiarize</Link>
                 {header}
             </div>
         )
