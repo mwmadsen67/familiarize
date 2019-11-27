@@ -14,14 +14,14 @@ class TreeShow extends React.Component {
     ]).then(() =>
       this.setState({
         tree: this.props.tree,
-        tree: this.props.tree
+        nodes: this.props.nodes
       })
     );
   };
 
   render() {
     if (!this.state) return null;
-    const nodes = Object.keys(this.props.nodes).map((id) => {
+    const nodes = Object.keys(this.state.nodes).map((id) => {
       return (
         <div key={id}>
           <NodeItem 

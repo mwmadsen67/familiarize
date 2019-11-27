@@ -1,6 +1,6 @@
 import React from "react"
 import {withRouter} from "react-router-dom"
-import navbar from "../../styles/nav-bar/nav-bar.scss"
+import "../../styles/nav-bar/nav-bar.scss"
 class NavBar extends React.Component{
 
     constructor(props){
@@ -45,7 +45,7 @@ class NavBar extends React.Component{
 
         return(
             <div className="navbar-container">
-                <div>Familiarize</div>
+                <a className='logo' href='#/main'>Familiarize</a>
                 {header}
             </div>
         )

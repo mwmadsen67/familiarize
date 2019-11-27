@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles/trees/tree_index.scss';
 
 class TreeIndexItem extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class TreeIndexItem extends React.Component {
     const button = (tree.creator === user) ? <input type='button' onClick={this.handleDelete} value="Delete Tree"/> : "";
 
   return (
-    <div>
+    <div className='tree-index-item'>
       <a href={`#/tree/${tree._id}`}>{tree.name}</a>
       {button}
     </div>

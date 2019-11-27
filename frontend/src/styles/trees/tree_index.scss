@@ -1,0 +1,40 @@
+.tree-index-header {
+  text-align: center;
+}
+
+.tree-index-main {
+   background: rgb(213, 252, 154);
+   height: 100vh;
+}
+
+.tree-index-item {
+  border: 1px solid grey;
+  width: 45%;
+  padding: 15px;
+  margin: 8px;
+  border-radius: 4px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 5px 5px 5px green;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.index-container {
+  width: 66%;
+}
+
+.index-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tree-form-container {
+  border: 1px solid grey;
+  border-radius: 4px;
+  text-align: center;
+}
