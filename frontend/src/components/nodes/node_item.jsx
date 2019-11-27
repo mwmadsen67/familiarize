@@ -1,7 +1,16 @@
 import React from 'react';
 
 const NodeItem = (props) => {
-  return <div>{props.node.name}</div>;
+  const children = props.node.children.map(child => {
+    return (
+    <li>{child}</li>
+    )
+  })
+  return <div className="node-item">{props.node.name}
+  <ul>
+    {children}
+  </ul>
+  </div>;
 
 };
 

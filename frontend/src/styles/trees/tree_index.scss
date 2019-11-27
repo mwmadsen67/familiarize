@@ -2,6 +2,8 @@
   text-align: center;
   font-size: 45px;
   font-weight: bold;
+  font-family: 'Merienda One', cursive;
+  padding-top: 8px;
 }
 
 .tree-index-main {
@@ -23,6 +25,7 @@
   display: flex;
   justify-content: space-around;
   box-shadow: 5px 5px 5px green;
+  font-family: 'Merienda One', cursive;
 
   a {
     text-decoration: none;
@@ -54,6 +57,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 20%;
+  font-family: 'Abril Fatface', cursive;
 }
 
 .tree-form-input {
@@ -80,6 +84,7 @@
   font-size: 18px;
   padding: 3px;
   cursor: pointer;
+  font-family: 'Abril Fatface', cursive;
   &:hover{
       filter: brightness(85%);
     }

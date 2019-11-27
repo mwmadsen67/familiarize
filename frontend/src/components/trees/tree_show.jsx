@@ -38,7 +38,6 @@ class TreeShow extends React.Component {
         <h1 className='show-title'>{this.state.tree.name} Tree</h1>
       <div className='show-body'>
         <div className='tree'>
-        <h2>Nodes</h2>
         {nodes}
         </div>
         <div className='node-form'>

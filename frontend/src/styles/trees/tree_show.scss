@@ -1,15 +1,17 @@
 .show-main {
   background: rgb(213, 252, 154);
-   height: 100vh;
+   height: 100%;
    background-image: url('../../assets/images/tree.png');
    background-repeat: no-repeat;
    background-size: auto;
 }
 
 .show-title {
+  font-family: 'Merienda One', cursive;
   text-align: center;
   font-size: 45px;
   font-weight: bold;
+  padding-top: 8px;
 }
 
 .show-body {
@@ -31,6 +33,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 20%;
+  font-family: 'Abril Fatface', cursive;
 }
 
 .node-form-input {
@@ -52,5 +55,20 @@
 
 .tree {
   width: 66%;
-  border: 1px solid red;
+}
+
+.node-item {
+  justify-content: center;
+  border: 1px solid lightblue;
+  background: rgba(15, 162, 225, .6);
+  width: 20%;
+  height: 50px;
+  padding: 15px;
+  margin: 8px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  box-shadow: 5px 5px 5px green;
+  font-family: 'Merienda One', cursive;
 }
