@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter,Link } from 'react-router-dom';
+import '../../styles/reset.scss';
 import "../../styles/session-signup/login.scss"
 
 class SignupForm extends React.Component {

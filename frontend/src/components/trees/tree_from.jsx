@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles/reset.scss';
 
 class TreeForm extends React.Component {
   constructor(props) {

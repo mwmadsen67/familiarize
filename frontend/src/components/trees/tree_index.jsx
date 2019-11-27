@@ -1,6 +1,7 @@
 import React from 'react'
 import TreeIndexItem from './tree_index_item'
 import TreeFormContainer from './tree_form_container';
+import '../../styles/reset.scss';
 import '../../styles/trees/tree_index.scss'
 
 class TreeIndex extends React.Component{

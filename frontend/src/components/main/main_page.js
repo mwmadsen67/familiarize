@@ -1,4 +1,5 @@
 import React from "react"
+import '../../styles/reset.scss';
 
 class MainPage extends React.Component{
 

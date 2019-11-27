@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../styles/reset.scss';
 
 class NodeForm extends React.Component {
   constructor(props) {
@@ -31,7 +32,7 @@ class NodeForm extends React.Component {
   render() {
     return (
       <div>
-        <div>This Form Creates a Tree Node</div>
+        <div>Grow your Tree!</div>
         <form onSubmit={this.handleSubmit} className='create-node-form'>
           <input
             type='text'
