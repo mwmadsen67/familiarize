@@ -18,7 +18,7 @@ class TreeIndexItem extends React.Component {
 
     const tree = this.props.tree;
     const user = this.props.user
-    const button = (tree.creator === user) ? <input type='button' onClick={this.handleDelete} value="Delete Tree"/> : "";
+    const button = (tree.creator === user) ? <input type='button' className='tree-delete' onClick={this.handleDelete} value="Delete Tree"/> : "";
 
   return (
     <div className='tree-index-item'>

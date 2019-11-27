@@ -1,6 +1,7 @@
 import React from 'react';
 import NodeFormContainer from '../nodes/node_form_container';
 import NodeItem from '../nodes/node_item';
+import '../../styles/trees/tree_show.scss';
 
 class TreeShow extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class TreeShow extends React.Component {
 
   render() {
     if (!this.state) return null;
-    const nodes = Object.keys(this.state.nodes).map((id) => {
+    const nodes = Object.keys(this.props.nodes).map((id) => {
       return (
         <div key={id}>
           <NodeItem 
@@ -31,14 +32,18 @@ class TreeShow extends React.Component {
       )
     })
     return (
-      <div>
-        <h1>{this.state.tree.name} Tree</h1>
-        <NodeFormContainer tree={this.state.tree}/>
+    <div className='show-main'>
+        <h1 className='show-title'>{this.state.tree.name} Tree</h1>
+      <div className='show-body'>
+        <div>
         <div>
         <h2>Nodes</h2>
         {nodes}
         </div>
+        <NodeFormContainer tree={this.state.tree}/>
+        </div>
       </div>
+    </div>
     )
   };
 };

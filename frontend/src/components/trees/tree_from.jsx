@@ -41,10 +41,12 @@ class TreeForm extends React.Component {
             placeholder='Tree Name'
             className='tree-form-input'
           />
+          <div>
           <input 
           className='tree-form-submit'
           type='submit'
           value='Create Tree'/>
+          </div>
         </form>
       </div>
     );
