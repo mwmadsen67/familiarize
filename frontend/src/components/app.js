@@ -1,6 +1,6 @@
 import React from "react"
 
-import {Switch} from "react-router-dom"
+import {Switch, Route} from "react-router-dom"
 import {AuthRoute, ProtectedRoute} from "../util/auth_util"
 import MainPage from "./main/main_page"
 import NavBarContainer from "./nav_bar/nav_bar_container"
@@ -18,8 +18,8 @@ const App = () => {
                 <AuthRoute exact path={"/"} component={MainPage}/>
                 <AuthRoute path={"/login"} component={LoginFormContainer}/>
                 <AuthRoute path={"/signup"} component={SignUpFormContainer}/>
-                <ProtectedRoute exact path={'/main'} component={TreeIndexContainer} />
-                <ProtectedRoute exact path={'/tree/:treeId'} component={TreeShowContainer} />
+                <Route exact path={'/trees'} component={TreeIndexContainer} />
+                <Route exact path={'/tree/:treeId'} component={TreeShowContainer} />
             </Switch>
         </div>
     )

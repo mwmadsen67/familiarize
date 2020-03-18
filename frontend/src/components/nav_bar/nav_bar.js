@@ -45,7 +45,7 @@ class NavBar extends React.Component{
 
         return(
             <div className="navbar-container">
-                <Link to="/main">Familiarize</Link>
+                <Link to="/trees">Familiarize</Link>
                 {header}
             </div>
         )
