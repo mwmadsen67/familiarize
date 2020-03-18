@@ -1,5 +1,7 @@
 import React from 'react';
 import Graph from 'vis-react'
+import '../../styles/reset.scss';
+import '../../styles/trees/tree_index.scss';
 
 class TreeIndexItem extends React.Component {
   constructor(props) {

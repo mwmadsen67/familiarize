@@ -1,12 +1,10 @@
 import React from 'react'
 import TreeIndexItem from './tree_index_item'
 import TreeFormContainer from './tree_form_container';
-import { Link } from 'react-router-dom';
+import '../../styles/reset.scss';
+import '../../styles/trees/tree_index.scss'
 
 class TreeIndex extends React.Component{
-  constructor(props) {
-    super(props)
-  }
 
   componentDidMount() {
     Promise.all([this.props.getTrees(), this.props.clearNodes()]);
@@ -27,10 +25,14 @@ class TreeIndex extends React.Component{
       )
     })
     return (
-      <div>
-        <h1>All The Trees</h1>
-        {trees}
-        <TreeFormContainer />
+      <div className='tree-index-main'>
+        <h1 className='tree-index-header'>All The Trees</h1>
+        <div className='index-form'>
+          <div className='index-container'>{trees}</div>
+          <div className='tree-form-container'>
+            <TreeFormContainer />
+          </div>
+        </div>
       </div>
     );
   }

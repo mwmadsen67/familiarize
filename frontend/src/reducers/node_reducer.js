@@ -6,7 +6,7 @@ const nodeReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_NODES:
       action.nodes.data.map((node) => {
-        newState[node._id] = node;
+        return newState[node._id] = node;
       });
       return newState;
     case RECEIVE_NODE:

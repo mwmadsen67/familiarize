@@ -1,0 +1,93 @@
+.tree-index-header {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: 'Merienda One', cursive;
+  padding-top: 8px;
+}
+
+.tree-index-main {
+   background: rgb(213, 252, 154);
+   height: 100vh;
+   background-image: url('../../assets/images/tree.png');
+   background-repeat: no-repeat;
+   background-size: auto;
+}
+
+.tree-index-item {
+  border: 1px solid lightblue;
+  background: rgba(15, 162, 225, .6);
+  width: 45%;
+  padding: 15px;
+  margin: 8px;
+  border-radius: 4px;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 5px 5px 5px green;
+  font-family: 'Merienda One', cursive;
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+}
+
+.index-container {
+  width: 66%;
+}
+
+.index-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tree-form-container {
+  background: rgba(15, 162, 225, .6);
+  border: 1px solid lightblue;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px green;
+  text-align: center;
+  padding: 10px;
+  height: 30%;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.tree-form-input {
+  background: rgb(213, 252, 154);
+  font-size: 18px;
+}
+
+.tree-form-submit {
+  background: rgb(213, 252, 154);
+  border-radius: 4px;
+  width: 30%;
+  font-size: 15px;
+  border: 1px solid darkgreen;
+  cursor: pointer;
+    &:hover {
+      filter: brightness(85%);
+    }
+}
+
+.tree-delete {
+  background: rgb(213, 252, 154);
+  border-radius: 4px;
+  border: 1px solid darkgreen;
+  font-size: 18px;
+  padding: 3px;
+  cursor: pointer;
+  font-family: 'Abril Fatface', cursive;
+  &:hover{
+      filter: brightness(85%);
+    }
+}
+
+
