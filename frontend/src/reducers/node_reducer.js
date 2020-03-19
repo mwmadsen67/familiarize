@@ -10,6 +10,7 @@ const nodeReducer = (state = {}, action) => {
       });
       return newState;
     case RECEIVE_NODE:
+      debugger
       newState[action.node.data._id] = action.node.data;
       return newState;
     case REMOVE_NODE:

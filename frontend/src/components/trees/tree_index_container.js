@@ -4,6 +4,7 @@ import { getTrees, getTree, updateTree, deleteTree } from '../../actions/tree_ac
 import { clearNodes } from '../../actions/node_actions';
 
 const MSP = (state) => {
+  debugger
   return ({
     trees: state.entities.trees,
     user: state.session.user.id

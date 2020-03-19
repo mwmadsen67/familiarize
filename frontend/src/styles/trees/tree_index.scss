@@ -9,9 +9,10 @@
 .tree-index-main {
    background: rgb(213, 252, 154);
    height: 100vh;
-   background-image: url('../../assets/images/tree.png');
+  //  background-image: url('../../assets/images/tree.png');
+   background-size: 100%;
    background-repeat: no-repeat;
-   background-size: auto;
+   background-size: contain;
 }
 
 .tree-index-item {

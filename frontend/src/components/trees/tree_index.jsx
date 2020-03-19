@@ -1,8 +1,8 @@
 import React from 'react'
 import TreeIndexItem from './tree_index_item'
 import TreeFormContainer from './tree_form_container';
-import '../../styles/reset.scss';
-import '../../styles/trees/tree_index.scss'
+  // import '../../styles/reset.scss';
+  // import '../../styles/trees/tree_index.scss'
 
 class TreeIndex extends React.Component{
 
@@ -29,9 +29,9 @@ class TreeIndex extends React.Component{
         <h1 className='tree-index-header'>All The Trees</h1>
         <div className='index-form'>
           <div className='index-container'>{trees}</div>
-          <div className='tree-form-container'>
+          {/* <div className='tree-form-container'>
             <TreeFormContainer />
-          </div>
+          </div> */}
         </div>
       </div>
     );
