@@ -1,6 +1,6 @@
 import React from "react"
 
-import {withRouter} from "react-router-dom"
+import {withRouter, Link} from "react-router-dom"
 import '../../styles/reset.scss';
 import "../../styles/nav-bar/nav-bar.scss"
 

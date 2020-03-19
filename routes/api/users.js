@@ -22,7 +22,7 @@ router.get('/current', passport.authenticate('jwt', { session: false }), (req, r
 })
 
 router.post("/register", (req, res) => {
-
+    debugger
     const { errors, isValid } = validateRegisterInput(req.body);
 
     if (!isValid) {
@@ -63,7 +63,8 @@ router.post("/register", (req, res) => {
     });
 });
 
-router.post('/login', (req, res) => {
+router.post("/login", (req, res) => {
+    debugger
     const email = req.body.email;
     const password = req.body.password;
     const { errors, isValid } = validateLoginInput(req.body);

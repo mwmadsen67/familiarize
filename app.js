@@ -8,6 +8,7 @@ const tweets = require('./routes/api/tweets.js')
 const trees = require('./routes/api/trees')
 const nodes = require('./routes/api/nodes')
 const passport = require("passport")
+const seed = require("./seeder")
 
 mongoose
     .connect(db, { useNewUrlParser: true, useUnifiedTopology: true,
@@ -32,5 +33,6 @@ app.use("/api/trees", trees)
 app.use('/api/nodes', nodes)
 
 const port = process.env.PORT || 5000;
-
+//seed mongo database
+seed();
 app.listen(port, () => console.log(`Server running on port ${port}`));

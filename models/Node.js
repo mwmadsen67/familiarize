@@ -10,14 +10,13 @@ const NodeSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'nodes'
   }],
-  children: [{
-    type: Schema.Types.ObjectId,
-    ref: 'nodes'
-  }],
+  // children: [{
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'nodes'
+  // }],
   tree_id: {
     type: Schema.Types.ObjectId,
-    ref: 'trees',
-    required: true
+    ref: 'trees'
   },
   current_company: {
     type: String
