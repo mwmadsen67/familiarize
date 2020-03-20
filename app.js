@@ -10,6 +10,13 @@ const nodes = require('./routes/api/nodes')
 const passport = require("passport")
 const seed = require("./seeder")
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('frontend/build'));
+    app.get('/', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+    })
+}
+
 mongoose
     .connect(db, { useNewUrlParser: true, useUnifiedTopology: true,
     useFindAndModify: false })
