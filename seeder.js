@@ -181,7 +181,7 @@ const seed = () => {
     rose.save()
 
     const michelle = new Node({
-        name: "Ryan Mapa",
+        name: "Michelle Kim",
         parents: [ryan],
         tree_id: "San Francisco Instructors"
     })
