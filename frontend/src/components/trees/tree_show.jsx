@@ -80,18 +80,16 @@ class TreeShow extends React.Component {
       }
     };
 
-    console.log(graph);
-
-    // return (
-    //     <Graph
-    //       graph={graph}
-    //       options={options}
-    //       events={events}
-    //       getNetwork={network => {
-    //         //  if you want access to vis.js network api you can set the state in a parent component using this property
-    //       }}
-    //     />
-    // )
+    return (
+        <Graph
+          graph={graph}
+          options={options}
+          events={events}
+          getNetwork={network => {
+            //  if you want access to vis.js network api you can set the state in a parent component using this property
+          }}
+        />
+    )
   }
 
   // render() {

@@ -48,7 +48,7 @@ const seed = () => {
     elliot.save()
 
     const aaron = new Node({
-        name: "Aaron (lastname)",
+        name: "Aaron Wayne",
         parents: [],
         tree_id: "San Francisco Instructors"
     })
@@ -61,9 +61,23 @@ const seed = () => {
     })
     dallas.save()
 
-    const carly = new Node({
-        name: "Carly (lastname)",
+    const hope = new Node({
+        name: "Hope Wanroy",
         parents: [],
+        tree_id: "San Francisco Instructors"
+    })
+    hope.save()
+    
+    const cynthia = new Node({
+        name: "Cynthia Ma",
+        parents:[hope],
+        tree_id: "San Francisco Instructors"
+    })
+    cynthia.save()
+
+    const carly = new Node({
+        name: "Carly Schaff",
+        parents: [cynthia],
         tree_id: "San Francisco Instructors"
     })
     carly.save()
@@ -75,22 +89,10 @@ const seed = () => {
     })
     mike.save()
 
-    const hope = new Node({
-        name: "Hope Wanroy",
-        parents: [],
-        tree_id: "San Francisco Instructors"
-    })
-    hope.save()
 
-    const cynthia = new Node({
-        name: "Cynthia Ma",
-        parents:[hope],
-        tree_id: "San Francisco Instructors"
-    })
-    cynthia.save()
 
     const ronil = new Node({
-        name: "Ronile Bhatia",
+        name: "Ronil Bhatia",
         parents: [cynthia],
         tree_id: "San Francisco Instructors"
     })
@@ -118,7 +120,7 @@ const seed = () => {
     carlos.save()
 
     const andy = new Node({
-        name: "Andy Minucus",
+        name: "Andy Minucos",
         parents: [elliot],
         tree_id: "San Francisco Instructors"
     })
@@ -139,14 +141,14 @@ const seed = () => {
     stephen.save()
 
     const andyW = new Node({
-        name: "Andy Wyncoop",
+        name: "Andy WynKoop",
         parents: [aaron],
         tree_id: "San Francisco Instructors"
     })
     andyW.save()
 
     const luke = new Node({
-        name: "Luke (lastname)",
+        name: "Luke Wassink",
         parents: [dallas],
         tree_id: "San Francisco Instructors"
     })
@@ -174,7 +176,7 @@ const seed = () => {
     dean.save()
 
     const rose = new Node({
-        name: "Rose (lastname",
+        name: "Rose Koron",
         parents: [cynthia],
         tree_id: "San Francisco Instructors"
     })
