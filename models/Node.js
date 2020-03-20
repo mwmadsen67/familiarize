@@ -15,8 +15,10 @@ const NodeSchema = new Schema({
   //   ref: 'nodes'
   // }],
   tree_id: {
-    type: Schema.Types.ObjectId,
-    ref: 'trees'
+    // type: Schema.Types.ObjectId,
+    // ref: 'trees'
+    type: String,
+    required: true
   },
   current_company: {
     type: String

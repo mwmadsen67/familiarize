@@ -26,7 +26,7 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
 
 // Get All Nodes for Specific Tree
 router.get('/tree/:tree_id', (req, res) => {
-  Node.find({ tree_id: req.params.tree_id })
+  Node.find({ tree_id: "San Francisco Instructors" })
     .then(nodes => res.json(nodes))
     .catch(err => res.status(404).json({ noNodesFound: "No Nodes found on that tree" }))
 });

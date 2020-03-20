@@ -25,23 +25,44 @@ class TreeShow extends React.Component {
 
   makeTree(){
     
-    const graph = {
-      nodes: [
-        { id: 1, label: "Node 1", title: "node 1 tootip text" },
-        { id: 2, label: "Node 2", title: "node 2 tootip text" },
-        { id: 3, label: "Node 3", title: "node 3 tootip text" },
-        { id: 4, label: "Node 4", title: "node 4 tootip text" },
-        { id: 5, label: "Node 5", title: "node 5 tootip text" }
-      ],
-      edges: [
-        { from: 1, to: 2 },
-        { from: 2, to: 4 },
-        { from: 5, to: 1 },
-        { from: 1, to: 5 },
-        { from: 4, to: 5 },
-        { from: 3, to: 5 },
-      ]
-    };
+    const graph = {};
+    const nodes = Object.values(this.props.nodes).map(node => {
+      return {
+        id: node._id,
+        label: node.name,
+        title: node.name,
+      }
+    });
+
+    const edges = Object.values(this.props.nodes).map(node => {
+      if (node.parents[0]) {
+        return {
+          from: node._id,
+          to: node.parents[0]
+        }
+      }
+    }).filter((edge) => { if (edge != undefined) { return edge } })
+
+    graph.nodes = nodes;
+    graph.edges = edges;
+
+    // const graph = {
+    //   nodes: [
+    //     { id: 1, label: "Node 1", title: "node 1 tootip text" },
+    //     { id: 2, label: "Node 2", title: "node 2 tootip text" },
+    //     { id: 3, label: "Node 3", title: "node 3 tootip text" },
+    //     { id: 4, label: "Node 4", title: "node 4 tootip text" },
+    //     { id: 5, label: "Node 5", title: "node 5 tootip text" }
+    //   ],
+    //   edges: [
+    //     { from: 1, to: 2 },
+    //     { from: 2, to: 4 },
+    //     { from: 5, to: 1 },
+    //     { from: 1, to: 5 },
+    //     { from: 4, to: 5 },
+    //     { from: 3, to: 5 },
+    //   ]
+    // };
 
     const options = {
       layout: {
@@ -59,18 +80,18 @@ class TreeShow extends React.Component {
       }
     };
 
-    return (
-      <div>
-        <Graph
-          graph={graph}
-          options={options}
-          events={events}
-          getNetwork={network => {
-            //  if you want access to vis.js network api you can set the state in a parent component using this property
-          }}
-        />
-      </div>
-    )
+    console.log(graph);
+
+    // return (
+    //     <Graph
+    //       graph={graph}
+    //       options={options}
+    //       events={events}
+    //       getNetwork={network => {
+    //         //  if you want access to vis.js network api you can set the state in a parent component using this property
+    //       }}
+    //     />
+    // )
   }
 
   // render() {
@@ -102,52 +123,17 @@ class TreeShow extends React.Component {
   // };
 
   render() {
-    const graph = {
-      nodes: [
-        { id: 1, label: "Node 1", title: "node 1 tootip text" },
-        { id: 2, label: "Node 2", title: "node 2 tootip text" },
-        { id: 3, label: "Node 3", title: "node 3 tootip text" },
-        { id: 4, label: "Node 4", title: "node 4 tootip text" },
-        { id: 5, label: "Node 5", title: "node 5 tootip text" }
-      ],
-      edges: [
-        { from: 1, to: 2 },
-        { from: 2, to: 4 },
-        { from: 5, to: 1 },
-        { from: 1, to: 5 },
-        { from: 4, to: 5 },
-        { from: 3, to: 5 },
-      ]
-    };
-
-    const options = {
-      layout: {
-        hierarchical: false
-      },
-      edges: {
-        color: "#000000"
-      },
-      height: "1000px"
-    };
-
-    const events = {
-      select: function (event) {
-        var { nodes, edges } = event;
-      }
-    };
-
-    return (
-      <div>
-        <Graph
-          graph={graph}
-          options={options}
-          events={events}
-          getNetwork={network => {
-            //  if you want access to vis.js network api you can set the state in a parent component using this property
-          }}
-        />
-      </div>
-    )
+    
+    if (!this.props.nodes) {
+      return null;
+    } else {
+      const tree = this.makeTree();
+      return (
+        <div>
+          {tree}
+        </div>
+      )
+    }
   };
 };
 
