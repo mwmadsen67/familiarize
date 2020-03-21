@@ -1,5 +1,5 @@
 import React from 'react';
-import Graph from 'vis-react'
+import Graph from 'react-graph-vis'
 import NodeFormContainer from '../nodes/node_form_container';
 import NodeItem from '../nodes/node_item';
 import '../../styles/reset.scss';
@@ -71,7 +71,7 @@ class TreeShow extends React.Component {
       edges: {
         color: "#000000"
       },
-      height: "500px"
+      height: "1000px"
     };
 
     const events = {

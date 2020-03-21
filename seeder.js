@@ -47,23 +47,37 @@ const seed = () => {
     })
     elliot.save()
 
-    const aaron = new Node({
-        name: "Aaron Wayne",
+    const luke = new Node({
+        name: 'Luke Wassink',
         parents: [],
         tree_id: "San Francisco Instructors"
     })
-    aaron.save()
+    luke.save()
 
     const dallas = new Node({
         name: "Dallas Hall",
-        parents: [],
+        parents: [luke],
         tree_id: "San Francisco Instructors"
     })
     dallas.save()
 
+    const aaron = new Node({
+        name: "Aaron Wayne",
+        parents: [dallas],
+        tree_id: "San Francisco Instructors"
+    })
+    aaron.save()
+
+    const robert = new Node({
+        name: "Robert Koeze",
+        parents: [],
+        tree_id: "San Francisco Instructors"
+    })
+    robert.save()
+
     const hope = new Node({
         name: "Hope Wanroy",
-        parents: [],
+        parents: [robert],
         tree_id: "San Francisco Instructors"
     })
     hope.save()
@@ -140,19 +154,26 @@ const seed = () => {
     })
     stephen.save()
 
+    const jesse = new Node({
+        name: "Jesse Wong",
+        parents: [stephen],
+        tree_id: "San Francisco Instructors"
+    })
+    jesse.save()
+
+    const ryanM = new Node({
+        name: "Ryan Mease",
+        parents: [stephen],
+        tree_id: "San Francisco Instructors"
+    })
+    ryanM.save()
+
     const andyW = new Node({
         name: "Andy WynKoop",
         parents: [aaron],
         tree_id: "San Francisco Instructors"
     })
     andyW.save()
-
-    const luke = new Node({
-        name: "Luke Wassink",
-        parents: [dallas],
-        tree_id: "San Francisco Instructors"
-    })
-    luke.save()
 
     const walker = new Node({
         name: "Sam Walker",
@@ -230,6 +251,79 @@ const seed = () => {
         tree_id: "San Francisco Instructors"
     })
     joe.save()
+
+    const quinn = new Node({
+        name: 'Quinn Leong',
+        parents: [],
+        tree_id: "San Francisco Instructors"
+    })
+    quinn.save()
+
+    const shamayel = new Node({
+        name: 'Shamayel Daoud',
+        parents: [quinn],
+        tree_id: "San Francisco Instructors"
+    })
+    shamayel.save()
+
+    const brooke = new Node({
+        name: 'Brooke Angel',
+        parents: [],
+        tree_id: "San Francisco Instructors"
+    })
+    brooke.save()
+
+    const jennifer = new Node({
+        name: 'Jennifer Georgevich',
+        parents: [brooke],
+        tree_id: "San Francisco Instructors"
+    })
+    jennifer.save()
+
+    const kelly = new Node({
+        name: 'Kelly Chung',
+        parents: [],
+        tree_id: "San Francisco Instructors"
+    })
+    kelly.save()
+
+    const adom = new Node({
+        name: 'Adom Hartell',
+        parents: [kelly],
+        tree_id: "San Francisco Instructors"
+    })
+    adom.save()
+
+    const david = new Node({
+        name: 'David Dobrynin',
+        parents: [dallas],
+        tree_id: "San Francisco Instructors"
+    })
+    david.save()
+
+    const anastassia = new Node({
+        name: 'Anastassia Bobokalonova',
+        parents: [david],
+        tree_id: "San Francisco Instructors"
+    })
+    anastassia.save()
+
+    const isak = new Node({
+        name: 'Isak Mladenoff',
+        parents: [david],
+        tree_id: "San Francisco Instructors"
+    })
+    isak.save()
+
+    const munyo = new Node({
+        name: 'Munyo Frey',
+        parents: [shamayel],
+        tree_id: "San Francisco Instructors"
+    })
+    munyo.save()
+
+    
+
 }
 
 module.exports = seed
